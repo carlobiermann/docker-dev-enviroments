@@ -1,0 +1,15 @@
+# Get the base Ubuntu image from Docker Hub
+FROM ubuntu:22.04
+LABEL Description="C++ build environment"
+
+SHELL ["/bin/bash", "-c"]
+
+# Update apps on the base image
+RUN apt-get -y update && apt-get -y --no-install-recommends install \
+	build-essential \
+	clang \
+	cmake \
+	gdb \
+	wget \
+	vim
+
