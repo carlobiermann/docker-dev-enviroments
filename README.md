@@ -1,6 +1,8 @@
 # docker-dev-enviroments
 
+
 The code in this repository is mainly from Dmitry Danilov's article on [Dockerized build environments for C/C++ projects](https://ddanilov.me/dockerized-cpp-build)
+
 
 1. Download this repository:
 ```
@@ -23,4 +25,3 @@ $ docker run -it --rm --name=example_container \
 	example/example_build:0.1 \
 	bash
 ```
-
