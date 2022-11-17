@@ -14,7 +14,7 @@ $ git clone git@github.com:carlobiermann/docker-dev-enviroments.git
 - Run
 ```
 $ cd cpp-dev-env/docker-files/
-$ docker build -t cb_cpp_build_env/cpp_build_env_test:0.1 -f DockerfileCppBuildEnv .
+$ docker build -t cb_cpp_build_env/cpp_build_env_example:0.1 -f DockerfileExample .
 ```
 
 3. Run the docker container: 
