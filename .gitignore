@@ -1,0 +1,27 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.o
+
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.a
+
+# Executables
+
+*.out
+
+# Build folders
+/build/
+/cmake-build*/
+/**/build/
+/**/cmake-build*/
+
+
+# Clion folders
+/.idea/
+
+

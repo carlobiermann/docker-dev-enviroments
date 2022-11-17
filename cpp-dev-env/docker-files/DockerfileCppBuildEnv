@@ -1,25 +1,41 @@
 FROM ubuntu:22.04
-LABEL Description="Build environment"
+LABEL Description="C++ Build environment"
 
 ENV HOME /root
 
 SHELL ["/bin/bash", "-c"]
 
 RUN apt-get update && apt-get -y --no-install-recommends install \
+    ssh \
     build-essential \
+    gcc \
+    g++ \
     clang \
     cmake \
     gdb \
     wget \
-    vim
+    tar \
+    automake \
+    rsync \
+    autoconf \
+    ninja-build \
+    vim  \
+    valgrind 
 
-# Let us add some heavy dependency
-RUN cd ${HOME} && \
-    wget --no-check-certificate --quiet \
-        https://boostorg.jfrog.io/artifactory/main/release/1.77.0/source/boost_1_77_0.tar.gz && \
-        tar xzf ./boost_1_77_0.tar.gz && \
-        cd ./boost_1_77_0 && \
-        ./bootstrap.sh && \
-        ./b2 install && \
-        cd .. && \
-        rm -rf ./boost_1_77_0
+RUN apt-get clean
+
+RUN ( \
+    echo 'LogLevel DEBUG2'; \
+    echo 'PermitRootLogin yes'; \
+    echo 'PasswordAuthentication yes'; \
+    echo 'Subsystem sftp /usr/lib/openssh/sftp-server'; \
+  ) > /etc/ssh/sshd_config_test_clion \
+  && mkdir /run/sshd
+
+RUN useradd -m user \
+  && yes password | passwd user
+
+RUN usermod -s /bin/bash user
+
+CMD ["/usr/sbin/sshd", "-D", "-e", "-f", "/etc/ssh/sshd_config_test_clion"]
+
