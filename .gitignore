@@ -1,0 +1,23 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.o
+
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.a
+
+# Executables
+
+*.out
+
+# Build folder
+/build/
+
+# Clion folders
+/.idea/
+
+
