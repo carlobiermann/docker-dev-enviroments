@@ -14,8 +14,12 @@
 
 *.out
 
-# Build folder
+# Build folders
 /build/
+/cmake-build*/
+/**/build/
+/**/cmake-build*/
+
 
 # Clion folders
 /.idea/
