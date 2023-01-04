@@ -1,3 +1,0 @@
-/tmp/cpp-example-project/build/CMakeFiles/a.out.dir
-/tmp/cpp-example-project/build/CMakeFiles/edit_cache.dir
-/tmp/cpp-example-project/build/CMakeFiles/rebuild_cache.dir

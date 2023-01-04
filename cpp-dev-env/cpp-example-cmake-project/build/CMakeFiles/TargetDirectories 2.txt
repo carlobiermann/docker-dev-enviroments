@@ -1,3 +1,0 @@
-/src/cpp-dev-env/cpp-example-project/build/CMakeFiles/a.out.dir
-/src/cpp-dev-env/cpp-example-project/build/CMakeFiles/edit_cache.dir
-/src/cpp-dev-env/cpp-example-project/build/CMakeFiles/rebuild_cache.dir
