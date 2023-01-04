@@ -26,7 +26,7 @@ $ docker run -it --rm --name=example_container \
 	bash
 ```
 
-4. Run the docker container for remote development on port 22
+4. Run the docker container for remote development on port 2222
 ```
 docker run --name=test_container -d --cap-add sys_ptrace -p127.0.0.1:2222:22 cb_cpp_build_env/cpp_build_env:0.5
 ```
